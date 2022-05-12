@@ -46,7 +46,6 @@ jobs:
 
       # Build
     name: Build for ${{ matrix.targetPlatform }}
-      matrix:
         targetPlatform:
           # - StandaloneOSX # Build a macOS standalone (Intel 64-bit).
           - StandaloneWindows # Build a Windows standalone.
