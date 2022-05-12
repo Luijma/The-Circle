@@ -46,8 +46,6 @@ jobs:
 
       # Build
     name: Build for ${{ matrix.targetPlatform }}
-    strategy:
-      fail-fast: false
       matrix:
         targetPlatform:
           # - StandaloneOSX # Build a macOS standalone (Intel 64-bit).
