@@ -45,12 +45,6 @@ jobs:
       #          githubToken: ${{ secrets.GITHUB_TOKEN }}
 
       # Build
-name: Build project
-
-on: [push, pull_request]
-
-jobs:
-  buildForAllSupportedPlatforms:
     name: Build for ${{ matrix.targetPlatform }}
     runs-on: ubuntu-latest
     strategy:
