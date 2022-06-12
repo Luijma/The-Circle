@@ -19,6 +19,7 @@ public class ConnectToServer : MonoBehaviourPunCallbacks
             // This way no potential issues arise from multiclicking connect, and also it'll fit our design
             PhotonNetwork.NickName = usernameInput.text;
             buttonText.text = "Connecting...";
+            PhotonNetwork.AutomaticallySyncScene = true;
             PhotonNetwork.ConnectUsingSettings();
         }
     }
