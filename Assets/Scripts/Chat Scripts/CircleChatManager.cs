@@ -5,6 +5,7 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class CircleChatManager : MonoBehaviour, IChatClientListener
 {
@@ -39,17 +40,6 @@ public class CircleChatManager : MonoBehaviour, IChatClientListener
 
     public void OnGetMessages(string channelName, string[] senders, object[] messages)
     {
-        // Here is where the code to generate message items will go
-        // Remove all messages in list
-        foreach (MessageItem item in messageItemList)
-        {
-            Destroy(item.gameObject);
-        }
-        messageItemList.Clear();
-        
-        
-        // Repopulate content and format message text
-
         string msg = "";
         for (int i = 0; i < senders.Length; i++)
         {
@@ -58,6 +48,7 @@ public class CircleChatManager : MonoBehaviour, IChatClientListener
             MessageItem newMessage = Instantiate(messageItemPrefab, contentObject.transform);
             newMessage.SetMessageItemInfo(msg);
             messageItemList.Add(newMessage);
+            chatScrollBar.value = 0;
         }
     }
 
@@ -122,6 +113,7 @@ public class CircleChatManager : MonoBehaviour, IChatClientListener
     string currentChat;
     string privateReceiver = "";
     [SerializeField] TMP_InputField chatField;
+    [SerializeField] Scrollbar chatScrollBar;
 
     // for generating messages
     public MessageItem messageItemPrefab;
