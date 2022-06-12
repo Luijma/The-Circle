@@ -11,7 +11,9 @@ public class LobbyManager : MonoBehaviourPunCallbacks
     public TMP_InputField roomInputField;
     public GameObject lobbyPanel;
     public GameObject roomPanel;
+    public GameObject GoCircleButton;
     public TMP_Text roomName;
+    public TMP_Text buttonText;
 
     public RoomItem roomItemPrefab;
     List<RoomItem> roomItemsList = new List<RoomItem>();
@@ -23,6 +25,25 @@ public class LobbyManager : MonoBehaviourPunCallbacks
     private void Start()
     {
         PhotonNetwork.JoinLobby();
+    }
+
+    private void Update()
+    {
+        if (PhotonNetwork.IsMasterClient && PhotonNetwork.CurrentRoom.PlayerCount >= 2)
+        {
+            GoCircleButton.SetActive(true);
+        }
+        else
+        {
+            GoCircleButton.SetActive(false);
+        }
+    }
+
+    // Start is called before the first frame update
+    public void OnClickCircleChat()
+    {
+        buttonText.text = "Connecting...";
+        PhotonNetwork.LoadLevel("Group_Chat");
     }
     public void OnClickCreate()
     {
