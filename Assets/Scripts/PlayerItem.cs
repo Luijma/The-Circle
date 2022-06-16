@@ -21,7 +21,7 @@ public class PlayerItem : MonoBehaviourPunCallbacks
 
     Player player;
 
-    private void Start()
+    private void Awake()
     {
         backgroundImage = GetComponent<Image>();
     }
