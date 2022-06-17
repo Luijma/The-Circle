@@ -81,6 +81,7 @@ public class PlayerItem : MonoBehaviourPunCallbacks
             characterImage.sprite = avatars[(int)player.CustomProperties["characterImage"]];
             playerProperties["characterImage"] = (int)player.CustomProperties["characterImage"];
         } else
+
         {
             playerProperties["characterImage"] = 0;
         }
