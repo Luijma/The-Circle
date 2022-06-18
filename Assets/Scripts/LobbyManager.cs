@@ -49,7 +49,7 @@ public class LobbyManager : MonoBehaviourPunCallbacks
     public void OnClickCircleChat()
     {
         buttonText.text = "Connecting...";
-        PhotonNetwork.LoadLevel("Group_Chat");
+        PhotonNetwork.LoadLevel("Private_Chat");
     }
     public void OnClickCreate()
     {

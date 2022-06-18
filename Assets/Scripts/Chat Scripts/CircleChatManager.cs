@@ -41,20 +41,34 @@ public class CircleChatManager : MonoBehaviour, IChatClientListener
     public void OnGetMessages(string channelName, string[] senders, object[] messages)
     {
         string msg = "";
-        for (int i = 0; i < senders.Length; i++)
-        {
-            msg = string.Format("{0}:\n{1}", senders[i], messages[i]);
 
-            MessageItem newMessage = Instantiate(messageItemPrefab, contentObject.transform);
-            newMessage.SetMessageItemInfo(msg);
-            messageItemList.Add(newMessage);
-            chatScrollBar.value = 0;
-        }
+            for (int i = 0; i < senders.Length; i++)
+            {
+                msg = string.Format("{0}:\n{1}", senders[i], messages[i]);
+
+                MessageItem newMessage = Instantiate(messageItemPrefab, contentObject.transform);
+                newMessage.SetMessageItemInfo(msg);
+                messageItemList.Add(newMessage);
+                chatScrollBar.value = 0;
+            }
     }
 
     public void OnPrivateMessage(string sender, object message, string channelName)
     {
-        throw new System.NotImplementedException();
+        string msg = "";
+        foreach (MessageContentItem contentItem in messageContentItemsList)
+        {
+            if (privateReceiver == contentItem.receiver)
+            {
+                msg = string.Format("{0}:\n{1}", sender, message);
+                MessageItem newMessage = Instantiate(messageItemPrefab, contentItem.transform);
+                newMessage.SetMessageItemInfo(msg);
+                contentItem.messageItemList.Add(newMessage);
+                chatScrollBar.value = 0;
+                break;
+            }
+        }
+        Debug.Log(msg);
     }
 
     public void OnStatusUpdate(string user, int status, bool gotMessage, object message)
@@ -107,13 +121,28 @@ public class CircleChatManager : MonoBehaviour, IChatClientListener
 
     #endregion PublicChat
 
+    #region PrivateChat
+    public string privateReceiver = "";
+    public List<MessageContentItem> messageContentItemsList = new List<MessageContentItem>();
+
+    public void SubmitPrivateChatOnClick()
+    {
+        if(privateReceiver != "")
+        {
+            chatClient.SendPrivateMessage(privateReceiver, currentChat);
+            chatField.text = "";
+            currentChat = "";
+        }
+    }
+
+
+    #endregion PrivateChat
 
     #region General
 
     string currentChat;
-    string privateReceiver = "";
     [SerializeField] TMP_InputField chatField;
-    [SerializeField] Scrollbar chatScrollBar;
+    public Scrollbar chatScrollBar;
 
     // for generating messages
     public MessageItem messageItemPrefab;
@@ -140,7 +169,7 @@ public class CircleChatManager : MonoBehaviour, IChatClientListener
         if (chatField.text != "" && Input.GetKey(KeyCode.Return))
         {
             SubmitPublicChatOnclick();
-            // SubmitPrivateChatOnClick();
+            SubmitPrivateChatOnClick();
         }
     }
 
