@@ -47,7 +47,7 @@ public class PrivateChatContainer : MonoBehaviour
             if (contentItem.receiver == userName)
             {
                 contentItem.GetComponent<GameObject>().SetActive(true);
-                chatManager
+                chatManager.chatScrollBar = contentItem.scrollBar;
             }
             else
             {
