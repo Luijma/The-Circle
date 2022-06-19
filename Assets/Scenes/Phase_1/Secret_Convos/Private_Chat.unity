@@ -777,7 +777,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   userName: default
   privateReceiver: 
-  messageContentItemsList: []
+  privateChatContainer: {fileID: 384865443}
   chatField: {fileID: 2092405606}
   chatScrollBar: {fileID: 0}
   messageItemPrefab: {fileID: 55471011333211588, guid: e3afffe8631683245bd90b6bc338b56c, type: 3}

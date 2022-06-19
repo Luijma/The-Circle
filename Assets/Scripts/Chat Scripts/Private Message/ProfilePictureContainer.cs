@@ -22,6 +22,7 @@ public class ProfilePictureContainer : MonoBehaviour
     public void OnDmButtonClick(string userName)
     {
         chatManager.privateReceiver = userName;
+        Debug.Log("chatmanager private receiver: " + chatManager.privateReceiver);
         privateChatContainer.SetActive(true);
         profilePicContainer.SetActive(false);
         privateChatContainer.GetComponent<PrivateChatContainer>().OpenChosenChat(userName);

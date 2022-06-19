@@ -56,12 +56,12 @@ public class CircleChatManager : MonoBehaviour, IChatClientListener
     public void OnPrivateMessage(string sender, object message, string channelName)
     {
         string msg = "";
-        foreach (MessageContentItem contentItem in messageContentItemsList)
+        foreach (MessageContentItem contentItem in privateChatContainer.contentList)
         {
             if (privateReceiver == contentItem.receiver)
             {
                 msg = string.Format("{0}:\n{1}", sender, message);
-                MessageItem newMessage = Instantiate(messageItemPrefab, contentItem.transform);
+                MessageItem newMessage = Instantiate(messageItemPrefab, contentItem.contentBox);
                 newMessage.SetMessageItemInfo(msg);
                 contentItem.messageItemList.Add(newMessage);
                 chatScrollBar.value = 0;
@@ -123,7 +123,7 @@ public class CircleChatManager : MonoBehaviour, IChatClientListener
 
     #region PrivateChat
     public string privateReceiver = "";
-    public List<MessageContentItem> messageContentItemsList = new List<MessageContentItem>();
+    public PrivateChatContainer privateChatContainer;
 
     public void SubmitPrivateChatOnClick()
     {

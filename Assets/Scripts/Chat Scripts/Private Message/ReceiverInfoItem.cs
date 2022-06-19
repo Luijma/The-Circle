@@ -21,7 +21,6 @@ public class ReceiverInfoItem : MonoBehaviour
         userName.text = _player.NickName;
         int characterIndex = (int)_player.CustomProperties["characterImage"];
         CharacterImage.sprite = characters[characterIndex];
-
     }
     void Start()
     {

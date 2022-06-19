@@ -36,6 +36,7 @@ public class PrivateChatContainer : MonoBehaviour
             {
                 ReceiverInfoItem newReceiverInfoItem = Instantiate(receiverInfoItemPrefab, receiverInfoParent);
                 newReceiverInfoItem.SetReceiverInfo(player.Value);
+                receiverInfoList.Add(newReceiverInfoItem);
             }
         }
         
@@ -48,6 +49,7 @@ public class PrivateChatContainer : MonoBehaviour
             {
                 contentItem.GetComponent<GameObject>().SetActive(true);
                 chatManager.chatScrollBar = contentItem.scrollBar;
+                Debug.Log("Opened messageContentItem for " + userName);
             }
             else
             {
@@ -59,6 +61,7 @@ public class PrivateChatContainer : MonoBehaviour
             if (infoItem.receiver == userName)
             {
                 infoItem.GetComponent<GameObject>().SetActive(true);
+                Debug.Log("Opened receiver info for userName");
             }
             else
             {
