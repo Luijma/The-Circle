@@ -19,7 +19,7 @@ public class ProfilePictureContainer : MonoBehaviour
     public CircleChatManager chatManager;
 
 
-    void OnDmButtonClick(string userName)
+    public void OnDmButtonClick(string userName)
     {
         chatManager.privateReceiver = userName;
         privateChatContainer.SetActive(true);
@@ -30,18 +30,18 @@ public class ProfilePictureContainer : MonoBehaviour
 
     private void PopulateProfilePictureContainer()
     {
-        foreach (KeyValuePair<int, Player> player in PhotonNetwork.CurrentRoom.Players)
+        foreach (Player player in PhotonNetwork.PlayerList)
         {
-            if (player.Value != PhotonNetwork.LocalPlayer)
+            if (player != PhotonNetwork.LocalPlayer)
             {
                 DmIconItem newDmIcon = Instantiate(DmIconPrefab, DmIconParent);
-                newDmIcon.SetPlayerInfo(player.Value);
-                newDmIcon.GetComponentInChildren<Button>().onClick.AddListener(delegate { OnDmButtonClick(player.Value.NickName); });
+                newDmIcon.SetPlayerInfo(player);
+                newDmIcon.GetComponentInChildren<Button>().onClick.AddListener(delegate { OnDmButtonClick(player.NickName); });
                 DmIconList.Add(newDmIcon);
             }
         }
     }
-    private void Awake()
+    private void Start()
     {
         PopulateProfilePictureContainer();
     }
