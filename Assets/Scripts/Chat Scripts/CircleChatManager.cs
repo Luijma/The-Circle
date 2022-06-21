@@ -47,7 +47,7 @@ public class CircleChatManager : MonoBehaviour, IChatClientListener
             msg = string.Format("{0}:\n{1}", senders[i], messages[i]);
 
             MessageItem newMessage = Instantiate(messageItemPrefab, contentObject.transform);
-            newMessage.SetMessageItemInfo(msg);
+            newMessage.SetMessageItemInfo(msg, senders[i]);
             messageItemList.Add(newMessage);
             chatScrollBar.value = 0;
         }
