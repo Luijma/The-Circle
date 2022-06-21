@@ -31,7 +31,7 @@ public class MessageContentItem : MonoBehaviour
         // This will be called when a message is received while a conversation is open
         string msg = "";
 
-        msg = string.Format("{0}:\n{1}", sender, message);
+        msg = string.Format("{0}:\n{1}", sender, message.ToString());
         Debug.Log("Inside UpdateCurrentConversation, message is: " + msg);
         MessageItem newMessage = Instantiate(messageItemPrefab, this.transform);
         newMessage.SetMessageItemInfo(msg/*, senderPic */);

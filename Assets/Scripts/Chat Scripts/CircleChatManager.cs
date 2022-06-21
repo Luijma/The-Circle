@@ -55,10 +55,10 @@ public class CircleChatManager : MonoBehaviour, IChatClientListener
 
     public void OnPrivateMessage(string sender, object message, string channelName)
     {
-        if (privateChatContainer.currentChat != null)
+        if (privateReceiver != "")
         {
             messageContentItem.UpdateCurrentConversation(sender, message);
-            Debug.Log(message);
+            Debug.Log(message.ToString());
         }
     }
 
