@@ -59,7 +59,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 0.12525162, b: 0.0990566, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -341,6 +341,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   messageText: {fileID: 5319789154102646891}
   profilePic: {fileID: 5319789153265185031}
+  receiver: public chat
+  sender: public chat
+  characters:
+  - {fileID: 21300000, guid: eb9f6cc72c6b9104f89b8b588d8029c5, type: 3}
+  - {fileID: 21300000, guid: 228529bc8b8a07143b1d236856583c0e, type: 3}
+  - {fileID: 21300000, guid: cc6c59b83d2dde941a8ffd8af244cad6, type: 3}
 --- !u!1 &8739044207817925224
 GameObject:
   m_ObjectHideFlags: 0

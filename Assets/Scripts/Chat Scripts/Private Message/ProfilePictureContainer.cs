@@ -22,10 +22,13 @@ public class ProfilePictureContainer : MonoBehaviour
     public void OnDmButtonClick(string userName)
     {
         chatManager.privateReceiver = userName;
+        chatManager.CreatePrivateChat(userName);
         Debug.Log("chatmanager private receiver: " + chatManager.privateReceiver);
         privateChatContainer.gameObject.SetActive(true);
         profilePicContainer.gameObject.SetActive(false);
         Debug.Log("Deactivated and activated both objects");
+
+
         privateChatContainer.OpenChosenChat(userName);
         Debug.Log(userName);
     }

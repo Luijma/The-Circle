@@ -12,6 +12,7 @@ public class MessageItem : MonoBehaviour
     public Image profilePic;
     public string receiver = "public chat";
     public string sender = "public chat";
+    public Sprite[] characters;
     // Start is called before the first frame update
     void Start()
     {
@@ -25,9 +26,20 @@ public class MessageItem : MonoBehaviour
     }
 
     // Implementing the Image code is harder so we'll have to work on that later
-    public void SetMessageItemInfo(string _messageText /* Image _profilePic */)
+    public void SetMessageItemInfo(string _messageText, string senderUsername)
     {
         messageText.text = _messageText;
+        foreach (Player player in PhotonNetwork.PlayerList)
+        {
+            if(player.NickName == senderUsername)
+            {
+                if(player.CustomProperties.ContainsKey("characterImage"))
+                {
+                    int characterIndex = (int)player.CustomProperties["characterImage"];
+                    profilePic.sprite = characters[characterIndex];
+                }
+            }
+        }
         //profilePic = _profilePic;
     }
     
