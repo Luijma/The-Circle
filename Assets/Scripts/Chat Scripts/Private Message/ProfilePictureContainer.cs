@@ -14,8 +14,8 @@ public class ProfilePictureContainer : MonoBehaviour
     public Transform DmIconParent;
 
     // Panel Setting variables
-    public GameObject privateChatContainer;
-    public GameObject profilePicContainer;
+    public PrivateChatContainer privateChatContainer;
+    public ProfilePictureContainer profilePicContainer;
     public CircleChatManager chatManager;
 
 
@@ -23,9 +23,10 @@ public class ProfilePictureContainer : MonoBehaviour
     {
         chatManager.privateReceiver = userName;
         Debug.Log("chatmanager private receiver: " + chatManager.privateReceiver);
-        privateChatContainer.SetActive(true);
-        profilePicContainer.SetActive(false);
-        privateChatContainer.GetComponent<PrivateChatContainer>().OpenChosenChat(userName);
+        privateChatContainer.gameObject.SetActive(true);
+        profilePicContainer.gameObject.SetActive(false);
+        Debug.Log("Deactivated and activated both objects");
+        privateChatContainer.OpenChosenChat(userName);
         Debug.Log(userName);
     }
 

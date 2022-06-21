@@ -14,7 +14,6 @@ public class ReceiverInfoItem : MonoBehaviour
     public Image CharacterImage;
     public TMP_Text userName;
     public Sprite[] characters;
-    public string receiver;
 
     public void SetReceiverInfo(Player _player)
     {

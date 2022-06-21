@@ -3,11 +3,15 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
+using Photon.Pun;
+using Photon.Realtime;
 
 public class MessageItem : MonoBehaviour
 {
     public TMP_Text messageText;
     public Image profilePic;
+    public string receiver = "public chat";
+    public string sender = "public chat";
     // Start is called before the first frame update
     void Start()
     {

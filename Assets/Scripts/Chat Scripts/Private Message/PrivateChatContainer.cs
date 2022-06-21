@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using Photon.Pun;
 using Photon.Realtime;
+using Photon.Chat;
 
 public class PrivateChatContainer : MonoBehaviour
 {
@@ -12,73 +13,54 @@ public class PrivateChatContainer : MonoBehaviour
     public ReceiverInfoItem receiverInfoItemPrefab;
     public Transform receiverInfoParent;
     // Chatbox
-    public List<MessageContentItem> contentList = new List<MessageContentItem>();
-    public MessageContentItem messageContentPrefab;
-    public Transform contentParent;
+    public MessageContentItem messageContentItem;
+    public ChatChannel currentChat;
 
-    public GameObject profilePictureContainer;
-    public GameObject privateChatContainer;
-    CircleChatManager chatManager;
-    public void PopulateReceiverInfo()
-    {
-        foreach (KeyValuePair<int, Player> player in PhotonNetwork.CurrentRoom.Players)
-        {
-            if (player.Value != PhotonNetwork.LocalPlayer)
-            {
-                MessageContentItem newMessageContentItem = Instantiate(messageContentPrefab, contentParent);
-                newMessageContentItem.SetMessageContentInfo(player.Value);
-                contentList.Add(newMessageContentItem);
-            }
-        }
-        foreach (KeyValuePair<int, Player> player in PhotonNetwork.CurrentRoom.Players)
-        {
-            if (player.Value != PhotonNetwork.LocalPlayer)
-            {
-                ReceiverInfoItem newReceiverInfoItem = Instantiate(receiverInfoItemPrefab, receiverInfoParent);
-                newReceiverInfoItem.SetReceiverInfo(player.Value);
-                receiverInfoList.Add(newReceiverInfoItem);
-            }
-        }
-        
-    }
+    public ProfilePictureContainer profilePictureContainer;
+    public PrivateChatContainer privateChatContainer;
+    public CircleChatManager chatManager;
+  
     public void OpenChosenChat(string userName)
     {
-        foreach (MessageContentItem contentItem in contentList)
+        chatManager.chatClient.TryGetPrivateChannelByUser(userName, out currentChat);
+        Debug.Log("current Chat channel: " + currentChat.Name);
+        Debug.Log("username: " + userName);
+
+        messageContentItem.DisplayCurrentConversation(currentChat);
+        
+        Debug.Log("After DisplayCurrent Conversation call");
+        foreach (Player player in PhotonNetwork.PlayerList)
         {
-            if (contentItem.receiver == userName)
+            if (player.NickName == userName)
             {
-                contentItem.GetComponent<GameObject>().SetActive(true);
-                chatManager.chatScrollBar = contentItem.scrollBar;
-                Debug.Log("Opened messageContentItem for " + userName);
-            }
-            else
-            {
-                contentItem.GetComponent<GameObject>().SetActive(false);
-            }
-        }
-        foreach (ReceiverInfoItem infoItem in receiverInfoList)
-        {
-            if (infoItem.receiver == userName)
-            {
-                infoItem.GetComponent<GameObject>().SetActive(true);
-                Debug.Log("Opened receiver info for userName");
-            }
-            else
-            {
-                infoItem.GetComponent<GameObject>().SetActive(false);
+                ReceiverInfoItem newReceiverInfoItem = Instantiate(receiverInfoItemPrefab, receiverInfoParent);
+                newReceiverInfoItem.SetReceiverInfo(player);
+                receiverInfoList.Add(newReceiverInfoItem);
+
             }
         }
     }
     public void OnChatClosed()
     {
         chatManager.privateReceiver = "";
-        privateChatContainer.SetActive(false);
-        profilePictureContainer.SetActive(true);
+        currentChat = null;
+        messageContentItem.ClearCurrentConversation();
+        // Remove Receiver info
+        foreach (ReceiverInfoItem receiverInfo in receiverInfoList)
+        {
+            Destroy(receiverInfo.gameObject);
+        }
+        receiverInfoList.Clear();
+        privateChatContainer.gameObject.SetActive(false);
+        profilePictureContainer.gameObject.SetActive(true);
     }
     // Start is called before the first frame update
     void Start()
     {
-        PopulateReceiverInfo();
+        foreach (Player player in PhotonNetwork.PlayerList)
+        {
+            chatManager.CreatePrivateChat(player.NickName);
+        }
     }
 
     // Update is called once per frame
