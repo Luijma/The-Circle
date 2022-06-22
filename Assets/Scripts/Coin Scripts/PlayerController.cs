@@ -6,8 +6,8 @@ public class PlayerController : MonoBehaviour
     public Rigidbody2D rb;
     public Vector2 movement;
 
-    private float XLimit = 1054f;
-    private float YLimit = 535f;
+    private float XLimit = 27f;
+    private float YLimit = 13f;
     // Start is called before the first frame update
     void Start()
     {
