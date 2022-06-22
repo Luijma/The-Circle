@@ -5,7 +5,7 @@ using UnityEngine;
 public class SpawnManager : MonoBehaviour
 {
     public GameObject CoinPrefab;
-    public float radius = 1;
+    public float radius = 7;
 
     //Spawn Timer
     private float startDelay = 0.2f;

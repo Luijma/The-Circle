@@ -2,11 +2,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class DestrotOutOfBounds : MonoBehaviour
+public class LimitsBound : MonoBehaviour
 {
     //Limits
-    private float spawnLimitX = 13f;
-    private float spawnLimitY = 5.2f;
+    private float spawnLimitX = 34f;
+    private float spawnLimitY = 29f;
 
     // Start is called before the first frame update
     void Start()

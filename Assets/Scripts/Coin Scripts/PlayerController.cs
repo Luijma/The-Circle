@@ -6,8 +6,8 @@ public class PlayerController : MonoBehaviour
     public Rigidbody2D rb;
     public Vector2 movement;
 
-    private float XLimit = 13.5f;
-    private float YLimit = 5.5f;
+    private float XLimit = 1054f;
+    private float YLimit = 535f;
     // Start is called before the first frame update
     void Start()
     {
@@ -30,7 +30,7 @@ public class PlayerController : MonoBehaviour
         {
             transform.position = new Vector2(transform.position.x, -YLimit);
         }
-        if (transform.position.y > YLimit + 1)
+        if (transform.position.y > YLimit)
         {
             transform.position = new Vector2(transform.position.x, YLimit);
         }
