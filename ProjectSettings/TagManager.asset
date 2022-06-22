@@ -44,3 +44,15 @@ TagManager:
   - name: Background
     uniqueID: 3910497081
     locked: 0
+  - name: Player1
+    uniqueID: 4271035741
+    locked: 0
+  - name: Coin
+    uniqueID: 337969115
+    locked: 0
+  - name: Score
+    uniqueID: 3146373371
+    locked: 0
+  - name: Timer
+    uniqueID: 563148409
+    locked: 0
