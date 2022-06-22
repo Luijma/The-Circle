@@ -940,7 +940,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7405491855395719368, guid: c448f129aaff09d4b9b23ae8efa97828, type: 3}
       propertyPath: levelToLoad
-      value: 
+      value: Voting_Phase
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c448f129aaff09d4b9b23ae8efa97828, type: 3}

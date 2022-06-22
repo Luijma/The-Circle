@@ -12,12 +12,19 @@ public class DmIconItem : MonoBehaviourPunCallbacks
     public Sprite[] characters;
     public TMP_Text userName;
     public Button dmButton;
-    private Transform parent;
+    public Transform parent;
+    public VotingManager votingManager;
     ExitGames.Client.Photon.Hashtable playerProperties = new ExitGames.Client.Photon.Hashtable();
     Player player;
 
     public void IconOnClick()
     {
+        // Code for voting here
+        if (player.CustomProperties.ContainsKey("votesAgainstMe"))
+        {
+            playerProperties["votesAgainstMe"] = (int)player.CustomProperties["votesAgainstMe"] + 1;
+        }
+        parent.GetComponentInParent<VotingManager>().PlayerVoted(PhotonNetwork.LocalPlayer);
     }
     public void SetPlayerInfo(Player _player)
     {
@@ -45,7 +52,6 @@ public class DmIconItem : MonoBehaviourPunCallbacks
     // Start is called before the first frame update
     void Start()
     {
-        parent = GetComponentInParent<ProfilePictureContainer>().transform;
     }
     public override void OnPlayerPropertiesUpdate(Player targetPlayer, ExitGames.Client.Photon.Hashtable changedProps)
     {
