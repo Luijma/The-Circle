@@ -1,12 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using TMPro;
 
 public class GeneralChatTimer : MonoBehaviour
 {
-    public float timeValue = 300;
+    public float timeValue;
     public TMP_Text timeText;
+    public string levelToLoad;
 
     void Update()
     {
@@ -16,7 +18,7 @@ public class GeneralChatTimer : MonoBehaviour
         }
         else
         {
-            timeValue = 0;
+            SceneManager.LoadScene(levelToLoad);
         }
 
         DisplayTime(timeValue);
@@ -24,10 +26,6 @@ public class GeneralChatTimer : MonoBehaviour
 
     void DisplayTime(float timeToDisplay)
     {
-        if (timeToDisplay < 0)
-        {
-            timeToDisplay = 0;
-        }
         float minutes = Mathf.FloorToInt(timeToDisplay / 60);
         float seconds = Mathf.FloorToInt(timeToDisplay % 60);
         timeText.text = string.Format("{0:00}:{1:00}", minutes, seconds);
