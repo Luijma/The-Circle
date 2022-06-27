@@ -27,11 +27,11 @@ public class DmIconItem : MonoBehaviourPunCallbacks
                 playerVoted = player;
                 break;
             }
-            else
-            {
+        }
+        if (playerVoted == null)
+        {
                 playerVoted = null;
                 Debug.Log("Player appeared as NULL during IconOnClick");
-            }
         }
         parent.GetComponentInParent<VotingManager>().TallyVote(playerVoted);
         parent.GetComponentInParent<VotingManager>().PlayerVoted(PhotonNetwork.LocalPlayer);
