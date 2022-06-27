@@ -94,7 +94,7 @@ public class VotingManager : MonoBehaviourPunCallbacks
             {
                 roomProperties["everyoneVoted"] = "true";
                 PhotonNetwork.CurrentRoom.SetCustomProperties(roomProperties);
-                FindLoser();
+                // FindLoser();
             }
         }
     }
