@@ -267,6 +267,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7405491855395719368, guid: c448f129aaff09d4b9b23ae8efa97828, type: 3}
+      propertyPath: timeValue
+      value: 55
+      objectReference: {fileID: 0}
+    - target: {fileID: 7405491855395719368, guid: c448f129aaff09d4b9b23ae8efa97828, type: 3}
       propertyPath: levelToLoad
       value: Group_Chat
       objectReference: {fileID: 0}
@@ -718,6 +722,7 @@ MonoBehaviour:
   icons: []
   votingIconPrefab: {fileID: 242484122129159570, guid: e72cc0ac1764b244f84762339ecdca33, type: 3}
   votingIconParent: {fileID: 962577434}
+  votingManager: {fileID: 72467713}
 --- !u!114 &962577436
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -45,6 +45,18 @@ public class VotingManager : MonoBehaviourPunCallbacks
             }
         }
         EjectLoser(loser);
+        // If only two players left, the game moves on to final phase
+        if (PhotonNetwork.CurrentRoom.PlayerCount >= 3)
+        {
+            if (PhotonNetwork.IsMasterClient)
+            {
+                PhotonNetwork.LoadLevel("Group_Chat");
+            }
+        }
+        else
+        {
+            Debug.Log("Time to move on to final Phase !");
+        }
     }
     public void EjectLoser(Player loser)
     {
@@ -80,12 +92,27 @@ public class VotingManager : MonoBehaviourPunCallbacks
             }
             if (voteCheck)
             {
+                roomProperties["everyoneVoted"] = "true";
+                PhotonNetwork.CurrentRoom.SetCustomProperties(roomProperties);
                 FindLoser();
             }
         }
     }
+    public void TallyVote(Player targetPlayer)
+    {
+        ExitGames.Client.Photon.Hashtable voteCount = new ExitGames.Client.Photon.Hashtable();
+        voteCount["votesAgainstMe"] = (int)targetPlayer.CustomProperties["votesAgainstMe"] + 1;
+        targetPlayer.SetCustomProperties(voteCount);
+    }
     public override void OnRoomPropertiesUpdate(ExitGames.Client.Photon.Hashtable propertiesThatChanged)
     {
+        if (propertiesThatChanged.ContainsKey("everyoneVoted"))
+        {
+            if ((string)propertiesThatChanged["everyoneVoted"] == "true")
+            {
+                FindLoser();
+            }
+        }
     }
     // Start is called before the first frame update
     void Awake()

@@ -11,6 +11,7 @@ public class VotingIconContainer : MonoBehaviour
     public List<DmIconItem> icons = new List<DmIconItem>();
     public DmIconItem votingIconPrefab;
     public Transform votingIconParent;
+    public VotingManager votingManager;
     
     private void PopulateVotingIconContainer()
     {
@@ -20,6 +21,7 @@ public class VotingIconContainer : MonoBehaviour
             {
                 DmIconItem newVotingIcon = Instantiate(votingIconPrefab, votingIconParent);
                 newVotingIcon.SetPlayerInfo(player);
+                newVotingIcon.votingManager = votingManager;
                 newVotingIcon.parent = votingIconParent;
                 icons.Add(newVotingIcon);
             }
