@@ -12,25 +12,42 @@ public class DmIconItem : MonoBehaviourPunCallbacks
     public Sprite[] characters;
     public TMP_Text userName;
     public Button dmButton;
-    private Transform parent;
-    ExitGames.Client.Photon.Hashtable playerProperties = new ExitGames.Client.Photon.Hashtable();
+    public Transform parent;
+    public VotingManager votingManager;
     Player player;
 
     public void IconOnClick()
     {
+        Player playerVoted = null;
+        // Code for voting here
+        foreach (Player player in PhotonNetwork.PlayerList)
+        {
+            if (this.userName.text == player.NickName)
+            {
+                playerVoted = player;
+                break;
+            }
+        }
+        if (playerVoted == null)
+        {
+            playerVoted = null;
+            Debug.Log("Player appeared as NULL during IconOnClick");
+        }
+        votingManager.TallyVote(playerVoted);
+        votingManager.PlayerVoted(PhotonNetwork.LocalPlayer);
     }
     public void SetPlayerInfo(Player _player)
     {
         // Here is also where we'd set the background image later on
 
-            player = _player;
-            userName.text = _player.NickName;
-            UpdateDmIconItem(player);
-            // characterImage.sprite = characters[characterIndex];
+        player = _player;
+        userName.text = _player.NickName;
+        UpdateDmIconItem(player);
+        // characterImage.sprite = characters[characterIndex];
     }
     private void UpdateDmIconItem(Player player)
-    { 
-        if(player.CustomProperties.ContainsKey("characterImage"))
+    {
+        if (player.CustomProperties.ContainsKey("characterImage"))
         {
             int characterIndex = (int)player.CustomProperties["characterImage"];
             characterImage.sprite = characters[characterIndex];
@@ -45,7 +62,6 @@ public class DmIconItem : MonoBehaviourPunCallbacks
     // Start is called before the first frame update
     void Start()
     {
-        parent = GetComponentInParent<ProfilePictureContainer>().transform;
     }
     public override void OnPlayerPropertiesUpdate(Player targetPlayer, ExitGames.Client.Photon.Hashtable changedProps)
     {
@@ -58,6 +74,6 @@ public class DmIconItem : MonoBehaviourPunCallbacks
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 }
