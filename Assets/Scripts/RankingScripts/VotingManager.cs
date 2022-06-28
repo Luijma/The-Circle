@@ -14,6 +14,7 @@ public class VotingManager : MonoBehaviourPunCallbacks
     public bool voteCheck = false;
     public GameObject waitBox;
     public GameObject votingIconContainer;
+    public EliminationManager eliminationManager;
     public void PrepareRoomInfo()
     {
         roomProperties["everyoneVoted"] = "false";
@@ -36,42 +37,16 @@ public class VotingManager : MonoBehaviourPunCallbacks
         Player loser = null;
         foreach (Player player in PhotonNetwork.PlayerList)
         {
-            Debug.Log("Player: " + player.NickName + " Vote total: ");
+            Debug.Log("Player: " + player.NickName + " Vote total: " + player.CustomProperties["votesAgainstMe"]);
             if ((int)player.CustomProperties["votesAgainstMe"] > most)
             {
                 most = (int)player.CustomProperties["votesAgainstMe"];
                 loser = player;
             }
         }
-        EjectLoser(loser);
-        // If only two players left, the game moves on to final phase
-        if (PhotonNetwork.CurrentRoom.PlayerCount >= 3)
-        {
-            if (PhotonNetwork.IsMasterClient)
-            {
-                PhotonNetwork.LoadLevel("Group_Chat");
-            }
-        }
-        else
-        {
-            Debug.Log("Time to move on to final Phase !");
-        }
+        eliminationManager.StartEliminationProcess(loser);
     }
-    public void EjectLoser(Player loser)
-    {
-        if (loser == null)
-        {
-            Debug.Log("The player is NULL! something went wrong during FindLoser()");
-        }
-        else
-        {
-            if (PhotonNetwork.LocalPlayer == loser)
-            {
-                PhotonNetwork.LeaveRoom();
-                SceneManager.LoadScene("StartMenu");
-            }
-        }
-    }
+    
     public override void OnPlayerPropertiesUpdate(Player targetPlayer, ExitGames.Client.Photon.Hashtable changedProps)
     {
         if (changedProps.ContainsKey("hasVoted"))
