@@ -7,16 +7,17 @@ public class MSManager : MonoBehaviour
 {
     // Start is called before the first frame update
     void Awake()
-    {
-        DontDestroyOnLoad(gameObject);
-    }
-    private void Update()
-    {
-        Scene currentScene = SceneManager.GetActiveScene();
+     {
+         DontDestroyOnLoad(gameObject);
+     }
+     private void Update()
+     {
+         Scene currentScene = SceneManager.GetActiveScene();
 
-        if (currentScene.name == "Group_Chat")
-        {
-            Destroy(gameObject);
-        }
-    }
+         if (currentScene.name == "Group_Chat")
+         {
+             Destroy(gameObject);
+         }
+
+     }
 }

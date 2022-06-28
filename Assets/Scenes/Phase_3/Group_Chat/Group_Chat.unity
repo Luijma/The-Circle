@@ -1102,7 +1102,6 @@ GameObject:
   m_Component:
   - component: {fileID: 973632814}
   - component: {fileID: 973632813}
-  - component: {fileID: 973632812}
   m_Layer: 0
   m_Name: BGMusic
   m_TagString: Untagged
@@ -1110,18 +1109,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &973632812
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 973632811}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6dd1895a00c885b41beea82b91381919, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!82 &973632813
 AudioSource:
   m_ObjectHideFlags: 0

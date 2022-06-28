@@ -1048,6 +1048,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6dd1895a00c885b41beea82b91381919, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  MusicClips:
+  - {fileID: 8300000, guid: c5d4ab17aa9a34d418f03b3ba59d6bf1, type: 3}
+  - {fileID: 8300000, guid: 38161679bf1a157409f595f8925ba604, type: 3}
+  - {fileID: 8300000, guid: 48c4810015ded0841b7423d13541e585, type: 3}
+  Audio: {fileID: 864327599}
 --- !u!1 &1005269908
 GameObject:
   m_ObjectHideFlags: 0
