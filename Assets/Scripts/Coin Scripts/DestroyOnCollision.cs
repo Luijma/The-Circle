@@ -20,6 +20,7 @@ public class DestroyOnCollision : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Player"))
         {
+            coinCounter.coinAmount += 1;
             Destroy(gameObject);
         }
     }
