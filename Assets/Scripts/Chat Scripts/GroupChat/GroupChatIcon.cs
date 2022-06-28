@@ -1,51 +1,28 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
-using TMPro;
 using Photon.Pun;
 using Photon.Realtime;
 
-public class DmIconItem : MonoBehaviourPunCallbacks
+public class GroupChatIcon : MonoBehaviourPunCallbacks
 {
     public Image characterImage;
     public Sprite[] characters;
-    public TMP_Text userName;
-    public Button dmButton;
-    public Transform parent;
-    public VotingManager votingManager;
+    //public TMP_Text userName;
     Player player;
 
-    public void IconOnClick()
-    {
-        Player playerVoted = null;
-        // Code for voting here
-        foreach (Player player in PhotonNetwork.PlayerList)
-        {
-            if (this.userName.text == player.NickName)
-            {
-                playerVoted = player;
-                break;
-            }
-        }
-        if (playerVoted == null)
-        {
-            playerVoted = null;
-            Debug.Log("Player appeared as NULL during IconOnClick");
-        }
-        votingManager.TallyVote(playerVoted);
-        votingManager.PlayerVoted(PhotonNetwork.LocalPlayer);
-    }
     public void SetPlayerInfo(Player _player)
     {
         // Here is also where we'd set the background image later on
 
         player = _player;
-        userName.text = _player.NickName;
-        UpdateDmIconItem(player);
+        // userName.text = _player.NickName;
+        UpdateIconItem(player);
         // characterImage.sprite = characters[characterIndex];
     }
-    private void UpdateDmIconItem(Player player)
+    private void UpdateIconItem(Player player)
     {
         if (player.CustomProperties.ContainsKey("characterImage"))
         {
@@ -58,22 +35,24 @@ public class DmIconItem : MonoBehaviourPunCallbacks
             characterImage.sprite = characters[0];
         }
     }
-
-    // Start is called before the first frame update
-    void Start()
-    {
-    }
     public override void OnPlayerPropertiesUpdate(Player targetPlayer, ExitGames.Client.Photon.Hashtable changedProps)
     {
         if (player == targetPlayer)
         {
             Debug.Log("player was evaluated as targetPlayer. Updating items");
-            UpdateDmIconItem(targetPlayer);
+            UpdateIconItem(targetPlayer);
         }
     }
+
+    // Start is called before the first frame update
+    void Start()
+    {
+        
+    }
+
     // Update is called once per frame
     void Update()
     {
-
+        
     }
 }

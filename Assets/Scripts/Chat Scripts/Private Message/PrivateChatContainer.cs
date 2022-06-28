@@ -22,13 +22,6 @@ public class PrivateChatContainer : MonoBehaviour
   
     public void OpenChosenChat(string userName)
     {
-        chatManager.chatClient.TryGetPrivateChannelByUser(userName, out currentChat);
-        Debug.Log("current Chat channel: " + currentChat.Name);
-        Debug.Log("username: " + userName);
-
-        messageContentItem.DisplayCurrentConversation(currentChat);
-        
-        Debug.Log("After DisplayCurrent Conversation call");
         foreach (Player player in PhotonNetwork.PlayerList)
         {
             if (player.NickName == userName)
@@ -39,6 +32,13 @@ public class PrivateChatContainer : MonoBehaviour
 
             }
         }
+        chatManager.chatClient.TryGetPrivateChannelByUser(userName, out currentChat);
+        Debug.Log("current Chat channel: " + currentChat.Name);
+        Debug.Log("username: " + userName);
+
+        messageContentItem.DisplayCurrentConversation(currentChat);
+        
+        Debug.Log("After DisplayCurrent Conversation call");
     }
     public void OnChatClosed()
     {

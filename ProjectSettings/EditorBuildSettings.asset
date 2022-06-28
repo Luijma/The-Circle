@@ -20,4 +20,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Phase_1/Secret_Convos/Private_Chat.unity
     guid: 28bcae580d70be347929fc64d4d1fe08
+  - enabled: 1
+    path: Assets/Scenes/Phase_2/Ratings/Player_Ratings.unity
+    guid: 0d81a82aef0f8fc489d16c2880b677fd
   m_configObjects: {}
