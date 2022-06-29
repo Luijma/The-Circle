@@ -2,6 +2,8 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
+    public AudioSource Audio_Coin_Player;
+
     public float speed = 5f;
     public Rigidbody2D rb;
     public Vector2 movement;
@@ -44,6 +46,14 @@ public class PlayerController : MonoBehaviour
         //animator.SetFloat("Vertical", movement.y);
         //animator.SetFloat("Speed", movement.sqrMagnitude); //Length of movement vector for bette performance
 
+    }
+
+    public void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.tag == "Coin")
+        {
+            Audio_Coin_Player.Play();
+        }
     }
 
     void FixedUpdate()
