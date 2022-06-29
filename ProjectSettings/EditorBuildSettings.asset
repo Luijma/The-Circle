@@ -23,4 +23,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Phase_2/Ratings/Player_Ratings.unity
     guid: 0d81a82aef0f8fc489d16c2880b677fd
+  - enabled: 1
+    path: Assets/Scenes/Phase_3/Parting_Words/Parting_Words.unity
+    guid: 859e6919a3c3a184a838de65d63d46f3
+  - enabled: 1
+    path: Assets/Scenes/Phase_4/GameWinner.unity
+    guid: 0aa222f1f10ced443aa3c165cb725acf
   m_configObjects: {}
