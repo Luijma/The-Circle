@@ -18,6 +18,5 @@ public class MSManager : MonoBehaviour
          {
              Destroy(gameObject);
          }
-
      }
 }
