@@ -1,0 +1,760 @@
+fileFormatVersion: 2
+guid: 40d58dad1d8ee4610ad90f1028b54576
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 0
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 16384
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: ChatBoxAnim_0
+      rect:
+        serializedVersion: 2
+        x: 40
+        y: 4455
+        width: 484
+        height: 843
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f8d50021903ff426cae0c8c5c03cad04
+      internalID: 1957393946
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChatBoxAnim_1
+      rect:
+        serializedVersion: 2
+        x: 564
+        y: 4455
+        width: 484
+        height: 843
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 08963dea4abe94eee8a027fcd605f5fc
+      internalID: -32422657
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChatBoxAnim_2
+      rect:
+        serializedVersion: 2
+        x: 1088
+        y: 4455
+        width: 484
+        height: 843
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bb639479ac875472ba6844c7126aa431
+      internalID: 2018515955
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChatBoxAnim_3
+      rect:
+        serializedVersion: 2
+        x: 1612
+        y: 4455
+        width: 484
+        height: 843
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5512079b53a5b454482ebc19d5aa7467
+      internalID: 971730829
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChatBoxAnim_4
+      rect:
+        serializedVersion: 2
+        x: 2136
+        y: 4455
+        width: 484
+        height: 843
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5efd759dbfb9c4e66ba5962e8f9dbbe0
+      internalID: -664694100
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChatBoxAnim_5
+      rect:
+        serializedVersion: 2
+        x: 40
+        y: 3572
+        width: 484
+        height: 843
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 427178a92601b4923898be0328037626
+      internalID: 1789763227
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChatBoxAnim_6
+      rect:
+        serializedVersion: 2
+        x: 564
+        y: 3572
+        width: 484
+        height: 843
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ad5e31d0241fb4bb19aa48b28869e5b6
+      internalID: 980730501
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChatBoxAnim_7
+      rect:
+        serializedVersion: 2
+        x: 1088
+        y: 3572
+        width: 484
+        height: 843
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b945382e120f64a458aa11ba8fdd5977
+      internalID: 1414694143
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChatBoxAnim_8
+      rect:
+        serializedVersion: 2
+        x: 1612
+        y: 3572
+        width: 484
+        height: 843
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9545045a104e04a30a684a911678f179
+      internalID: 320748773
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChatBoxAnim_9
+      rect:
+        serializedVersion: 2
+        x: 2136
+        y: 3572
+        width: 484
+        height: 843
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b7f18370c3ea2498fab983881a970808
+      internalID: 1525500489
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChatBoxAnim_10
+      rect:
+        serializedVersion: 2
+        x: 40
+        y: 2689
+        width: 484
+        height: 843
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1ebddfe8d4e9645f1a7583fa741b592d
+      internalID: 57773898
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChatBoxAnim_11
+      rect:
+        serializedVersion: 2
+        x: 564
+        y: 2689
+        width: 484
+        height: 843
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b17073d74df5347fd9a3d39ad81b06e4
+      internalID: 926406119
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChatBoxAnim_12
+      rect:
+        serializedVersion: 2
+        x: 1088
+        y: 2689
+        width: 484
+        height: 843
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c2d6d5158ad694ff2a5bb0019dc31e97
+      internalID: 307074615
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChatBoxAnim_13
+      rect:
+        serializedVersion: 2
+        x: 1612
+        y: 2689
+        width: 484
+        height: 843
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3b401ebc6751047c69fa1b514748c09c
+      internalID: -1614266933
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChatBoxAnim_14
+      rect:
+        serializedVersion: 2
+        x: 2136
+        y: 2689
+        width: 484
+        height: 843
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b2d5ad2e520a641e7a153d10a7a20ca1
+      internalID: 1735915931
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChatBoxAnim_15
+      rect:
+        serializedVersion: 2
+        x: 40
+        y: 1806
+        width: 484
+        height: 843
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4e39c1d1dfe674857a269f0b31577a87
+      internalID: 1580580825
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChatBoxAnim_16
+      rect:
+        serializedVersion: 2
+        x: 564
+        y: 1806
+        width: 484
+        height: 843
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bce8ccef86bdb4af8b9af839e56631c9
+      internalID: -216499783
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChatBoxAnim_17
+      rect:
+        serializedVersion: 2
+        x: 1088
+        y: 1806
+        width: 484
+        height: 843
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dd7d2134bab314de08f58e41461851a0
+      internalID: 1924566790
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChatBoxAnim_18
+      rect:
+        serializedVersion: 2
+        x: 1612
+        y: 1806
+        width: 484
+        height: 843
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6f2b6930fb8bb43479a9c7c1e212a3f1
+      internalID: -536680644
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChatBoxAnim_19
+      rect:
+        serializedVersion: 2
+        x: 2136
+        y: 1806
+        width: 484
+        height: 843
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a467457cc48ec4870a8350788c9488cd
+      internalID: -610407082
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChatBoxAnim_20
+      rect:
+        serializedVersion: 2
+        x: 40
+        y: 923
+        width: 484
+        height: 843
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ad79e7b44ea6248539a47bf8dc8bcb63
+      internalID: 2096419140
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChatBoxAnim_21
+      rect:
+        serializedVersion: 2
+        x: 564
+        y: 923
+        width: 484
+        height: 843
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 48ac81832c3314bb5a4110c9240723bf
+      internalID: -299180963
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChatBoxAnim_22
+      rect:
+        serializedVersion: 2
+        x: 1088
+        y: 923
+        width: 484
+        height: 843
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9889aed9deadd495bbd687b2b9b98698
+      internalID: -991935684
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChatBoxAnim_23
+      rect:
+        serializedVersion: 2
+        x: 1612
+        y: 923
+        width: 484
+        height: 843
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7bda4208d9a7d42c397723e2d556a7bb
+      internalID: -2143490892
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChatBoxAnim_24
+      rect:
+        serializedVersion: 2
+        x: 2136
+        y: 923
+        width: 484
+        height: 843
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 84e3338cc1d64442b815709f6205bd47
+      internalID: -1429822139
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChatBoxAnim_25
+      rect:
+        serializedVersion: 2
+        x: 40
+        y: 40
+        width: 484
+        height: 843
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fb2d9ef84904b4122ab230be76bdee21
+      internalID: 1089502818
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChatBoxAnim_26
+      rect:
+        serializedVersion: 2
+        x: 564
+        y: 40
+        width: 484
+        height: 843
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f9fc5406588794f629a1cf71442a5e59
+      internalID: 1407690840
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChatBoxAnim_27
+      rect:
+        serializedVersion: 2
+        x: 1088
+        y: 40
+        width: 484
+        height: 843
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7634cdf46114b4602bed76aaa13c8f42
+      internalID: -1625757403
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChatBoxAnim_28
+      rect:
+        serializedVersion: 2
+        x: 1612
+        y: 40
+        width: 484
+        height: 843
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 81a231b9504a54c8783e265abebb78ef
+      internalID: 1055475565
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 03c683da9bba94ba88afde48e6bfbcca
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      ChatBoxAnim_0: 1957393946
+      ChatBoxAnim_23: -2143490892
+      ChatBoxAnim_2: 2018515955
+      ChatBoxAnim_25: 1089502818
+      ChatBoxAnim_13: -1614266933
+      ChatBoxAnim_12: 307074615
+      ChatBoxAnim_28: 1055475565
+      ChatBoxAnim_21: -299180963
+      ChatBoxAnim_18: -536680644
+      ChatBoxAnim_3: 971730829
+      ChatBoxAnim_4: -664694100
+      ChatBoxAnim_22: -991935684
+      ChatBoxAnim_16: -216499783
+      ChatBoxAnim_11: 926406119
+      ChatBoxAnim_10: 57773898
+      ChatBoxAnim_27: -1625757403
+      ChatBoxAnim_17: 1924566790
+      ChatBoxAnim_19: -610407082
+      ChatBoxAnim_24: -1429822139
+      ChatBoxAnim_1: -32422657
+      ChatBoxAnim_5: 1789763227
+      ChatBoxAnim_7: 1414694143
+      ChatBoxAnim_14: 1735915931
+      ChatBoxAnim_15: 1580580825
+      ChatBoxAnim_20: 2096419140
+      ChatBoxAnim_26: 1407690840
+      ChatBoxAnim_8: 320748773
+      ChatBoxAnim_9: 1525500489
+      ChatBoxAnim_6: 980730501
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

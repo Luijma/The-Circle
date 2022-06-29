@@ -10,6 +10,7 @@ public class GeneralChatTimer : MonoBehaviourPunCallbacks
     public float timeValue;
     public TMP_Text timeText;
     public string levelToLoad;
+    public LevelLoader levelLoader;
     private bool sceneLoading = false;
 
     void Update()
@@ -25,11 +26,11 @@ public class GeneralChatTimer : MonoBehaviourPunCallbacks
 
         DisplayTime(timeValue);
 
-        if (PhotonNetwork.IsMasterClient && sceneLoading == false && timeValue == 0)
+        if (/*PhotonNetwork.IsMasterClient && */sceneLoading == false && timeValue == 0)
         {
             sceneLoading = true;
             Debug.Log("inside of photon network is master client if statement (generalChatTimer script)");
-            PhotonNetwork.LoadLevel(levelToLoad);
+            levelLoader.LoadNextLevel();
             
         }
     }
