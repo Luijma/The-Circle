@@ -14,7 +14,7 @@ public class EliminationManager : MonoBehaviourPunCallbacks
     public GameObject safePlayerBox;
     Player eliminated;
     ExitGames.Client.Photon.Hashtable roomProperties = new ExitGames.Client.Photon.Hashtable();
-    
+    public LevelLoader levelLoader;
     public void StartEliminationProcess(Player loser)
     {
         waitBox.SetActive(false);
@@ -54,7 +54,8 @@ public class EliminationManager : MonoBehaviourPunCallbacks
             if (PhotonNetwork.LocalPlayer == loser)
             {
                 PhotonNetwork.LeaveRoom();
-                SceneManager.LoadScene("StartMenu");
+                PhotonNetwork.LoadLevel("StartMenu");
+
             }
         }
     }
@@ -63,19 +64,20 @@ public class EliminationManager : MonoBehaviourPunCallbacks
         // If only two players left, the game moves on to final phase
         if (PhotonNetwork.CurrentRoom.PlayerCount >= 3)
         {
-            if (PhotonNetwork.IsMasterClient)
-            {
-                // If enough players for the game to continue, restart
-                // loop
-                PhotonNetwork.LoadLevel("Parting_Words");
-            }
+
+            // If enough players for the game to continue, restart
+            // loop
+            levelLoader.sceneToLoad = "Parting_Words";
+            levelLoader.LoadNextLevel();
+
         }
         else
         {
             Debug.Log("Time to move on to final Phase !");
             // At the moment, two players are winners it seems
             // We'll need to work on this eventually but for now this works
-            PhotonNetwork.LoadLevel("GameWinner");
+            levelLoader.sceneToLoad = "GameWinner";
+            levelLoader.LoadNextLevel();
         }
 
     }

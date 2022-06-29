@@ -20,11 +20,11 @@ public class DmIconItem : MonoBehaviourPunCallbacks
     {
         Player playerVoted = null;
         // Code for voting here
-        foreach (Player player in PhotonNetwork.PlayerList)
+        foreach (Player _player in PhotonNetwork.PlayerList)
         {
-            if (this.userName.text == player.NickName)
+            if (this.userName.text == _player.NickName)
             {
-                playerVoted = player;
+                playerVoted = _player;
                 break;
             }
         }
