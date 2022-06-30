@@ -46,9 +46,13 @@ public class VotingManager : MonoBehaviourPunCallbacks
         }
         eliminationManager.StartEliminationProcess(loser);
     }
-    
+
     public override void OnPlayerPropertiesUpdate(Player targetPlayer, ExitGames.Client.Photon.Hashtable changedProps)
     {
+        if (changedProps.ContainsKey("votesAgainstMe"))
+        {
+            Debug.Log(targetPlayer.NickName + " has " + targetPlayer.CustomProperties["votesAgainstMe"]);
+        }
         if (changedProps.ContainsKey("hasVoted"))
         {
             foreach (Player player in PhotonNetwork.PlayerList)
