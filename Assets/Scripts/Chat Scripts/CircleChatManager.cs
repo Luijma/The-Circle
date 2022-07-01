@@ -129,7 +129,7 @@ public class CircleChatManager : MonoBehaviour, IChatClientListener
     public void CreatePrivateChat(string targetUser)
     {
         //Send an initial hello message through private chat to open the room
-        chatClient.SendPrivateMessage(targetUser, "conversation start");
+        chatClient.SendPrivateMessage(targetUser, "** Has opened your chat **");
         Debug.Log("Created private chat with " + targetUser);
     }
 
