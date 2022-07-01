@@ -280,7 +280,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 656eb0ce7a0384f62b226841fe37beab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerPrefabs: {fileID: 7802440136680317682, guid: a20a69422893c408086cf9dd89bffdbd, type: 3}
+  playerPrefabs: {fileID: 7802440136680317692, guid: a20a69422893c408086cf9dd89bffdbd, type: 3}
   minX: -15
   maxX: 15
   minY: -5
@@ -1403,10 +1403,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 2259940232814039714, guid: 58812f273b7534fd38c49b7f3be36eb0, type: 3}
-      propertyPath: sceneToLoad
-      value: Private_Chat
-      objectReference: {fileID: 0}
     - target: {fileID: 2259940232814039724, guid: 58812f273b7534fd38c49b7f3be36eb0, type: 3}
       propertyPath: m_Name
       value: LevelLoader
@@ -1454,6 +1450,10 @@ PrefabInstance:
     - target: {fileID: 2259940232814039725, guid: 58812f273b7534fd38c49b7f3be36eb0, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2259940233911734741, guid: 58812f273b7534fd38c49b7f3be36eb0, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -115.20998
       objectReference: {fileID: 0}
     - target: {fileID: 2259940234048270800, guid: 58812f273b7534fd38c49b7f3be36eb0, type: 3}
       propertyPath: m_Camera

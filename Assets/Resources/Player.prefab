@@ -255,6 +255,14 @@ MonoBehaviour:
   speed: 20
   rb: {fileID: 7802440136680317695}
   movement: {x: 0, y: 0}
+  characterImage: {fileID: 0}
+  avatars:
+  - {fileID: 21300000, guid: 615d2aad4963a4d47a9f442bba66c178, type: 3}
+  - {fileID: 21300000, guid: 1dccbbc72a0544c5a9aa1d796fce5f56, type: 3}
+  - {fileID: 21300000, guid: f780f458df3354e768af74a97a9374a3, type: 3}
+  - {fileID: 21300000, guid: abde4842989db4a81a72e5674e14c5f9, type: 3}
+  - {fileID: 21300000, guid: acc1bcb4f0b01422bb1de54892079aef, type: 3}
+  - {fileID: 21300000, guid: 166ef2489a2f34475b11c912fbca9237, type: 3}
 --- !u!61 &7802440136680317693
 BoxCollider2D:
   m_ObjectHideFlags: 0
