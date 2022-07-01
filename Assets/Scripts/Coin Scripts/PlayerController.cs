@@ -1,5 +1,6 @@
 using UnityEngine;
 using Photon.Pun;
+using UnityEngine.UI;
 
 public class PlayerController : MonoBehaviour
 {
@@ -8,7 +9,8 @@ public class PlayerController : MonoBehaviour
     public float speed = 5f;
     public Rigidbody2D rb;
     public Vector2 movement;
-
+    public SpriteRenderer characterImage;
+    public Sprite[] avatars;
     private float XLimit = 27f;
     private float YLimit = 13f;
 
@@ -19,6 +21,7 @@ public class PlayerController : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
         view = GetComponent<PhotonView>();
+        characterImage = GetComponent<SpriteRenderer>();
     }
 
     // Update is called once per frame
