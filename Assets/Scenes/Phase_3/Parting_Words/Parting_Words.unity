@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657874, g: 0.49641275, b: 0.5748172, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -416,7 +416,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.44753468, g: 0.51509213, b: 0.8396226, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -458,7 +458,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2259940232814039724, guid: 58812f273b7534fd38c49b7f3be36eb0, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2259940232814039725, guid: 58812f273b7534fd38c49b7f3be36eb0, type: 3}
       propertyPath: m_RootOrder
@@ -641,7 +641,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.8679245, g: 0.1760413, b: 0.1760413, a: 1}
+  m_Color: {r: 0.9622642, g: 0, b: 0, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -1231,7 +1231,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   characters:
-  - {fileID: 21300000, guid: eb9f6cc72c6b9104f89b8b588d8029c5, type: 3}
-  - {fileID: 21300000, guid: 228529bc8b8a07143b1d236856583c0e, type: 3}
-  - {fileID: 21300000, guid: cc6c59b83d2dde941a8ffd8af244cad6, type: 3}
+  - {fileID: 21300000, guid: c116af771683243ab86f7a6d817894f3, type: 3}
+  - {fileID: 21300000, guid: a998c318daedc42b1a974b126680c6e1, type: 3}
+  - {fileID: 21300000, guid: defbb8e71fc614c3984994eba5a7af62, type: 3}
+  - {fileID: 21300000, guid: 9c492bd7e831b462f8d5f1beb9ce59c9, type: 3}
+  - {fileID: 21300000, guid: b4bcbd726bf574d828e0dfb22ece1536, type: 3}
+  - {fileID: 21300000, guid: 5ac3caf22862a41d7b274c234dc10970, type: 3}
   goodbyeMessage: {fileID: 458854817}

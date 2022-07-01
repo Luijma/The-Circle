@@ -1403,10 +1403,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 2259940232814039714, guid: 58812f273b7534fd38c49b7f3be36eb0, type: 3}
-      propertyPath: sceneToLoad
-      value: Private_Chat
-      objectReference: {fileID: 0}
     - target: {fileID: 2259940232814039724, guid: 58812f273b7534fd38c49b7f3be36eb0, type: 3}
       propertyPath: m_Name
       value: LevelLoader
