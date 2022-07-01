@@ -25,8 +25,9 @@ public class VotingManager : MonoBehaviourPunCallbacks
     }
     public void PlayerVoted(Player votingPlayer)
     {
-        playerProperties["hasVoted"] = "true";
-        votingPlayer.SetCustomProperties(playerProperties);
+        ExitGames.Client.Photon.Hashtable voted = new ExitGames.Client.Photon.Hashtable();
+        voted["hasVoted"] = "true";
+        votingPlayer.SetCustomProperties(voted);
         votingIconContainer.SetActive(false);
         waitBox.SetActive(true);
 
@@ -80,7 +81,7 @@ public class VotingManager : MonoBehaviourPunCallbacks
     {
         ExitGames.Client.Photon.Hashtable voteCount = new ExitGames.Client.Photon.Hashtable();
         voteCount["votesAgainstMe"] = (int)targetPlayer.CustomProperties["votesAgainstMe"] + 1;
-        Debug.Log(targetPlayer.NickName + "Received one vote! Total: " + voteCount["votesAgainstMe"]);
+        Debug.Log(targetPlayer.NickName + "Received one vote! Total from votecount: " + voteCount["votesAgainstMe"]);
         targetPlayer.SetCustomProperties(voteCount);
     }
     public override void OnRoomPropertiesUpdate(ExitGames.Client.Photon.Hashtable propertiesThatChanged)
