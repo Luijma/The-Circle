@@ -282,6 +282,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   characterImage: {fileID: 2730927570737314849}
   characters:
-  - {fileID: 21300000, guid: eb9f6cc72c6b9104f89b8b588d8029c5, type: 3}
-  - {fileID: 21300000, guid: 228529bc8b8a07143b1d236856583c0e, type: 3}
-  - {fileID: 21300000, guid: cc6c59b83d2dde941a8ffd8af244cad6, type: 3}
+  - {fileID: 21300000, guid: c116af771683243ab86f7a6d817894f3, type: 3}
+  - {fileID: 21300000, guid: a998c318daedc42b1a974b126680c6e1, type: 3}
+  - {fileID: 21300000, guid: defbb8e71fc614c3984994eba5a7af62, type: 3}
+  - {fileID: 21300000, guid: 9c492bd7e831b462f8d5f1beb9ce59c9, type: 3}
+  - {fileID: 21300000, guid: b4bcbd726bf574d828e0dfb22ece1536, type: 3}
+  - {fileID: 21300000, guid: 5ac3caf22862a41d7b274c234dc10970, type: 3}
