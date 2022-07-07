@@ -87,7 +87,6 @@ Should you have any questions, please refer to the [Contributors](#contributors)
   <tr>
     <td align="center"><a href="https://github.com/Luijma"><img src="https://cdn.discordapp.com/attachments/983227241225940992/991480615859933204/PXL_20210607_131726325.jpg" width="94px;" alt=""/><br /><sub><b>Luis Manuel Rivera Sánchez</b></sub></a><br /><p> Lead Developer </p></td>
     <td align="center"><a href="https://github.com/Soly-M-27">
-[8:47 PM]
 <img src="https://cdn.discordapp.com/attachments/983227241225940992/991370439773388840/SolyProPic.jpg" width="100px;" alt=""/><br /><sub><b>Solymar Sánchez Molina</b></sub></a><br /><p> Creative Lead </p></td>
     <td align="center"><a href="https://github.com/ammartica"><img src="https://cdn.discordapp.com/attachments/983225744761192496/991006052747214898/Capture.JPG" width="100px;" alt=""/><br /><sub><b>Amisaday Martínez Campos</b></sub></a><br /><p> Software Developer </p></td>
     <td align="center"><br><a href="https://www.behance.net/christopherviera/"><img src="https://cdn.discordapp.com/attachments/696515864177934357/991737222963396618/unknown.png" width="100px;" alt=""/><br /><sub><b>Christopher Viera Sánchez</b></sub></a><br /><p> UX/UI </p></td>
