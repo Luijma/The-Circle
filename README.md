@@ -24,7 +24,6 @@ Contents
 * [Contributing](#contributing)
 * [Contributors](#contributors)
 * [Licensing](#licensing)
-[8:47 PM]
 <br>
 <br>
 
