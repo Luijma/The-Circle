@@ -36,6 +36,11 @@ public class DmIconItem : MonoBehaviourPunCallbacks
         votingManager.TallyVote(playerVoted);
         votingManager.PlayerVoted(PhotonNetwork.LocalPlayer);
     }
+    // Voting function for Influencer Election Mode
+    public void InfluencerVoteOnClick()
+    {
+
+    }
     public void SetPlayerInfo(Player _player)
     {
         // Here is also where we'd set the background image later on
