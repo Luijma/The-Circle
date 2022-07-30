@@ -1,8 +1,10 @@
+using Photon.Pun;
+using Photon.Realtime;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ElectionManager : MonoBehaviour
+public class ElectionManager : MonoBehaviourPunCallbacks
 {
     // Start is called before the first frame update
     void Start()

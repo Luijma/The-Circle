@@ -14,6 +14,7 @@ public class DmIconItem : MonoBehaviourPunCallbacks
     public Button dmButton;
     public Transform parent;
     public VotingManager votingManager;
+    public ElectionManager electionManager;
     Player player;
 
     public void IconOnClick()
